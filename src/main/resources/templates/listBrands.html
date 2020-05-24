@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>List Cars</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div id="listOfBrands">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Mark of Car</th>
+						<th>Name of Car</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="brand : ${listBrands}">
+						<td><span th:text="${brand.name}"></span></td>
+						<td>
+							<table>
+								<tr id="carName" th:each="car: ${brand.list}">
+									<td><span th:text="${car.name}"></span></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="container" th:if= "${!listBrands.empty}">
+		<div id="exclude">
+			<form action="delete" method="post">
+				<div class="form-group">
+					<label for="example">Enter the name of the car you want to delete: </label>
+					 <input type="text"
+						class="form-control" id="name" name="name" placeholder="Name" />
+				</div>
+				<button type="submit" class="btn btn-danger">Delete</button>
+			</form>
+		</div>
+	</div>
+	<br>
+	<div align="center">
+		<a href="/" class="btn btn-lg btn-primary">Click here to return
+			the Welcome Page</a>
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

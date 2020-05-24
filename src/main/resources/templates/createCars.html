@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Save Cars</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div id="listOfCars">
+			<form action="save" method="post">
+				<div class="form-group">
+					<label for="nome">Name</label> <input type="text"
+						class="form-control" id="name" name="name" placeholder="Name" />
+				</div>
+				<div class="form-group">
+					<label for="email">Mark</label> <input type="text"
+						class="form-control" id="mark" name="mark" placeholder="Mark" />
+				</div>
+				<button type="submit" class="btn btn-success">Save</button>
+			</form>
+		</div>
+	</div>
+<!-- 	<div class="container"> -->
+<!-- 	<table> -->
+<!-- 		<tr> -->
+<!-- 	        <td>Message of error : </td> -->
+<!-- 	        <td th:text="${message}"/> -->
+<!-- 	    </tr> -->
+<!--     </table> -->
+<!-- 	</div> -->
+	<div align="center">
+		<a href="/" class="btn btn-lg btn-primary">Click here to return the Welcome Page</a>
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
