@@ -2,6 +2,7 @@
 DEPENDENCIAS DO PROJETO
 
 Maven 3.6.3 
+
 Java 11
 
 COMO RODAR
